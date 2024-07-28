@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+:root {
+    --base-color: #EB3678;
+    --heading-color: #F9E400;
+    --sub-heading-color: #FFAF00;
+    --accent-color:  #005eff;
+    --darkmode-color : rgb(2, 21, 38);
+    --lightmode-color : white;
+}
+body {
+    font-family: "Mukta", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 21, 38);
+}
+
+/* Light Mode Styles */
+.light-mode {
+    background-color: var(--lightmode-color);
+    color: black;
+}
+
+.light-mode .navbar {
+    background-color: var(--lightmode-color);
+
+    color: black;
+}
+
+.light-mode .card {   
+    background-color: var(--lightmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.light-mode .skills-list li {   
+    background-color: var(--lightmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.light-mode .social-icons a {
+    color: black;
+}
+
+.light-mode .btn {
+    background-color: var(--lightmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.light-mode #image-container {   
+    background-color: var(--lightmode-color);
+
+}
+
+.light-mode .projects_section,
+.light-mode .skills_section,
+.light-mode .tools_section {   
+    background-color: var(--lightmode-color);
+
+    color: black;
+}
+
+.light-mode h2, .light-mode h3 {
+    color: black;
+}
+
+.light-mode p {
+    color: black;
+}
+
+/* Darkmode Light mode button code  */
+/* Default button style */
+#mode-toggle {
+    color: white;
+    background-color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button style for dark mode */
+body.dark-mode #mode-toggle {
+    color: black;
+    background-color: #e2e6ea;
+}
+/* Dark mode styles */
+body.dark-mode #about-me {
+    /* background-color: #333; */
+    color: #f9f9f9;
+}
+
+
+
+body.dark-mode #about-me p {
+    color: #ffffff;
+    /* background-color: #005582; */
+}
+
+
+/* Light mode button styles */body .btn {
+    background-color: #ddd;
+    color: #333;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: var(--darkmode-color);
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode .navbar {
+    background-color: var(--darkmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode .card {
+    background-color: var(--darkmode-color);
+    color: white;
+    border-color: var(--lightmode-color);
+}
+.dark-mode .card .card-content>p {
+    background-color: var(--darkmode-color);
+    color: white;
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode .skills-list li {
+    background-color: var(--darkmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode .social-icons a {
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode .btn {
+    background-color: var(--darkmode-color);
+
+    border-color: var(--lightmode-color);
+}
+
+.dark-mode #image-container {
+    background-color: var(--darkmode-color);
+}
+
+.dark-mode .projects_section,
+.dark-mode .skills_section,
+.dark-mode .tools_section {
+    background-color: var(--darkmode-color);
+
+    color: white;
+}
+
+.dark-mode h2, .dark-mode h3 {
+    color: white;
+}
+
+.dark-mode p {
+    color: white;
+}
+.light-mode .skills-list li {
+    background-color: white;
+    border-color: #ddd;
+    color: black;
+}
+
+.light-mode .skills-list li i {
+    color: var(--base-color);
+}
+
+.light-mode .social-icons a {
+    color: black;
+}
+
+/* Navbar darkmodes  */
+.light-mode .nav-item{
+    color: var(--darkmode-color);
+}
+.dark-mode .nav-item{
+    color: var(--lightmode-color);
+}
+
+
+
+p{
+    font-size: 1.3rem;
+}
+/* Navbar styling */
+.navbar {
+    background-color: transparent !important; /* Ensure transparency if needed */
+}
+
+.navbar-brand {
+    font-size: 2.3rem;
+    color: var(--base-color)!important;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 3rem;
+}
+
+/* Change the color of the nav-link items */
+.navbar-nav .nav-link {
+    color: var(--base-color); /* Default color */
+    font-size: 1.2rem;
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Required for the pseudo-element */
+}
+
+/* Add underline effect only on hover */
+.navbar-nav .nav-item:hover .nav-link {
+    color: var(--base-color); /* Hover color */
+}
+
+/* Underline effect for specific item on hover */
+.navbar-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; 
+    width: 100%;
+    height: 2.4px; /* Adjust the thickness of the underline */
+    background-color: var(--heading-color); /* Underline color */
+    transform: scaleX(0); /* Hide underline initially */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show underline only on hover of the nav-item */
+.navbar-nav .nav-item:hover .nav-link::after {
+    transform: scaleX(1); /* Show underline */
+}
+/* nav bar code ends here */
+
+#contact{
+    background-color: #2d7ef7;
+    color: white;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 0.6rem;
+}
+#contact:hover{
+    background-color: #2308f5;
+    /* display: none; */
+    
+}
+
+#image-container {
+    height: 80vh;
+    width: 100%;
+    background-color: rgb(2, 21, 38);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 4rem;
+}
+
+#left-content {
+    flex: 1;
+    padding-top: 5rem;
+}
+
+#right-content {
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--base-color);
+    padding: 11rem;
+    margin-top: 1rem;
+    background-image: url("./images/Rajesh_photo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    /* background-color: #EB3678; */
+
+}
+
+
+#main_name>span{
+    color: var(--base-color);
+
+}
+
+#role {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--base-color);
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid; /* Caret styling */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--base-color);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    #left-content, #right-content {
+        /* flex: 1 1 100%; */
+        text-align: left;
+    }
+
+    #main_name {
+        font-size: 1.8em;
+    }
+
+    #role {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    #image-container {
+        flex-direction: column;
+        /* height: auto; */
+        padding: 20px;
+    }
+
+    #main_name {
+        font-size: 1.5em;
+    }
+
+    #role {
+        font-size: 1.2em;
+    }
+    #right-content{
+        background-color: #EB3678;
+    }
+}
+
+@media (max-width: 480px) {
+    #main_name {
+        font-size: 1.2em;
+    }
+
+    #role {
+        font-size: 1em;
+    }
+}
+
+
+/* Projects section styling */
+.projects_section {
+    padding: 4rem 2rem;
+}
+
+.projects_section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--base-color);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: var(--base-color);
+}
+
+.card-content p {
+    color: #555;
+}
+
+.card-content .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--base-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+    background-color: #e02f7a; /* Slightly lighter shade */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Base styling for social media icons */
+.social-icons {
+    margin-top: 1.5rem; /* Adjust as needed */
+}
+
+.social-icon {
+    font-size: 3rem; /* Increase icon size */
+    margin-right: 1.5rem; /* Space between icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Default colors */
+.github-icon i {
+    color: #000000; /* GitHub color */
+}
+
+.linkedin-icon i {
+    color: #0077B5; /* LinkedIn color */
+}
+
+.whatsapp-icon i {
+    color: #25D366; /* WhatsApp color */
+}
+
+.gmail-icon i {
+    color: #D44638; /* Gmail color */
+}
+
+.outlook-icon i {
+    color: #0078D4; /* Outlook color */
+}
+
+/* Hover effects */
+.github-icon:hover i {
+    color: #000; /* Darker GitHub color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+.linkedin-icon:hover i {
+    color: #005582; /* Darker LinkedIn color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+.whatsapp-icon:hover i {
+    color: #128C7E; /* Darker WhatsApp color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+.gmail-icon:hover i {
+    color: #C13584; /* Darker Gmail color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+.outlook-icon:hover i {
+    color: #0056A0; /* Darker Outlook color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+/* Responsive design for icons */
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.5rem; /* Adjust icon size on smaller screens */
+    }
+}
+
+
+/* Font Awesome Icons */
+.fab, .fas {
+    font-size: 1.5rem; /* Adjust as needed */
+}
+
+/* Responsive design for icons */
+@media (max-width: 768px) {
+    .social-icons a {
+        font-size: 1.5rem; /* Adjust icon size on smaller screens */
+    }
+}
+
+/* //Downlaod Button stylings */
+/*  */
+.social-icons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+/* Resume button container */
+#resume-button {
+    margin-top: 2rem; /* Adjust as needed */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+}
+
+#resume-button .resume-link {
+    text-decoration: none; /* Remove underline from the link */
+    display: flex; /* Align text and button horizontally */
+    align-items: center; /* Center align text and button */
+    color: white;
+}
+.Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  }
+  
+  .svgIcon {
+    fill: rgb(214, 178, 255);
+  }
+  
+  .icon2 {
+    width: 18px;
+    height: 5px;
+    border-bottom: 2px solid rgb(182, 143, 255);
+    border-left: 2px solid rgb(182, 143, 255);
+    border-right: 2px solid rgb(182, 143, 255);
+  }
+  
+  .tooltip {
+    position: absolute;
+    right: -105px;
+    opacity: 0;
+    background-color: rgb(12, 12, 12);
+    /* color: var(--base-color); */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+ 
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 12, 12);
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    left: -5%;
+    transition-duration: .3s;
+    /* color: var(--base-color); */
+  }
+  
+  .Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    background-color: rgb(150, 94, 255);
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .icon2 {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    border-left: 2px solid rgb(235, 235, 235);
+    border-right: 2px solid rgb(235, 235, 235);
+  }
+  
+  .Btn:hover .svgIcon {
+    fill: rgb(255, 255, 255);
+    animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+
+
+  /* #About me stylings starts here */
+  #about-me {
+    /* color: white; */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    /* background-color: rgb(2, 21, 38); */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+#about-me p {
+    margin-bottom: 15px;
+}
+#about-me h2{
+    color: var(--base-color)
+}
+
+/* Add your existing styles here */
+
+/* Skills section */
+.skills_section {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    /* background-color: #f9f9f9; */
+    text-align: center;
+}
+
+.skills_section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: var(--base-color);
+}
+.skills-list{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    justify-content: center;
+    /* text-align: left; */
+    color: white;
+
+}
+
+
+/* Tools Known section */
+.tools_section {
+    padding: 2em 0;
+    /* background-color: #e9ecef; */
+    text-align: center;
+    color: white;
+}
+
+.tools_section h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.tools_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tools_section ul li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+#tools_known{
+    color: var(--base-color);
+}
