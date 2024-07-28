@@ -390,8 +390,11 @@ p{
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain; /* Ensures the entire image fits within the container */
+    object-position: center; /* Centers the image within the container */
+    background-color: #f0f0f0; /* Optional: Add a background color to show the empty space */
 }
+
 
 .card-content {
     padding: 1rem;
