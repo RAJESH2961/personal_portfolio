@@ -293,10 +293,23 @@ p{
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    /* background: rgb(170,161,60); */
+/* background: linear-gradient(216deg, rgba(170,161,60,0.6923363095238095) 32%, rgba(222,78,173,1) 77%); */
     /* background-color: #EB3678; */
 
 }
 
+/* Multi Colors for sub headings */
+
+.heading_multi_color{
+    background: linear-gradient(153deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 32%, rgba(252,176,69,1) 65%);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    z-index: 200;
+}
+/* --------------------------------------------------------------------------------------------------------- */
 
 #main_name>span{
     /* color: var(--base-color); */
@@ -440,7 +453,7 @@ p{
 .card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -458,10 +471,15 @@ p{
 .card-content {
     padding: 1rem;
 }
+.card-content p{
+    font-size: 16px;
+}
 
 .card-content h3 {
     margin-top: 0;
     color: var(--base-color);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -506,7 +524,8 @@ p{
 /* Hover effect for the card */
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 
@@ -865,4 +884,53 @@ body.dark-mode ul.skills-list li {
 body.light-mode ul.skills-list li {
     background-color: #f9f9f9;
     color: black;
+}
+
+
+
+/* Add this CSS to your existing stylesheet */
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .projects_section {
+        padding: 20px;
+    }
+    .heading_multi_color {
+        margin-top: 150px; /* Adjust the value as needed */
+    }
+    
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .card-content p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .card-content .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
 }
